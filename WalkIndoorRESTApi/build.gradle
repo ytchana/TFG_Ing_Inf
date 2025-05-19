@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.4.5'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+/*repositories {
+    mavenCentral()
+}*/
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.osgeo.org/repository/release/" } // Repositorio para PostGIS
+}
+
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+    implementation 'org.postgresql:postgresql:42.7.2'
+    implementation 'org.hibernate:hibernate-spatial:6.2.0.Final'
+    implementation 'org.hibernate:hibernate-spatial:6.2.6.Final'
+    implementation 'org.locationtech.jts:jts-core:1.18.2'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+    implementation 'org.glassfish:jakarta.el:4.0.2'
+
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    implementation 'net.postgis:postgis-jdbc:2.5.1'
+
+    implementation 'org.hibernate:hibernate-spatial'
+
+    implementation 'org.locationtech.jts:jts-core:1.18.0' // Alternativa a bedatadriven
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    implementation 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    runtimeOnly 'org.postgresql:postgresql'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
