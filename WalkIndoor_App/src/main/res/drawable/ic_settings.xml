@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ImageButton xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btnSettings"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/ic_button_image"
+    android:contentDescription="Configuraciones"
+    android:background="?android:attr/selectableItemBackground"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ResourceCycle" />

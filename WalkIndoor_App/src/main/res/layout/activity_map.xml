@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Vista del mapa ocupando toda la pantalla -->
+    <com.example.walkindoor.mapsManager.CustomMapView
+        android:id="@+id/customMapView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botón flotante para centrar el mapa en la parte superior derecha -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_center_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_center_map"
+        android:contentDescription="@string/centrar_mapa"
+        app:backgroundTint="@color/primary"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botón para guardar el mapa en la esquina inferior izquierda -->
+    <Button
+        android:id="@+id/btnSaveMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar Mapa"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

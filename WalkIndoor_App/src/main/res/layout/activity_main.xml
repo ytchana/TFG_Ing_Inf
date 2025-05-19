@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <!-- Título principal -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="30dp"
+        android:text="@string/bienvenido_a_walkindoor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <!-- Botón para crear un nuevo mapa -->
+    <Button
+        android:id="@+id/btnCreateMap"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="@string/crear_nuevo_mapa"
+        android:textSize="18sp"
+        android:background="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.606" />
+
+    <!-- Botón para buscar mapas guardados -->
+    <Button
+        android:id="@+id/btnSearchMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:text="@string/buscar_mapas_guardados"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateMap"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+<!--Enlace a fuente consultada: -->
+<!-- https://github.com/no0xd/MyStudy/blob/bc5d4a3e984884a71775b05e8b87f86638e98ebe/Android/android-tech-frontier/issue-16/%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E5%B8%83%E5%B1%80Transitions%E5%8A%A8%E7%94%BB-%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86.md -->
+<!-- https://www.youtube.com/watch?v=nEe7bx_IuOQ&t=555s -->
