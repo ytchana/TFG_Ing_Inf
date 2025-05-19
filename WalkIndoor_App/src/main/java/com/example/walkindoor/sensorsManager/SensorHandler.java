@@ -49,7 +49,7 @@ public class SensorHandler implements SensorEventListener {
     private final SensorCallback callback;
 
     /**
-     * Constructor del `SensorHandler`.
+     * Constructor del 'SensorHandler'.
      * Configura los sensores disponibles y verifica si el dispositivo tiene los necesarios.
      *
      * @param context  Contexto de la aplicación.
