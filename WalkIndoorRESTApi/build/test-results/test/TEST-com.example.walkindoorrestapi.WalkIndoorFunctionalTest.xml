@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.walkindoorrestapi.WalkIndoorFunctionalTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-05-15T16:56:46.885Z" hostname="DESKTOP-RT47OEL" time="0.001">
+  <properties/>
+  <testcase name="initializationError" classname="com.example.walkindoorrestapi.WalkIndoorFunctionalTest" time="0.001">
+    <failure message="java.lang.IllegalStateException: Configuration error: found multiple declarations of @BootstrapWith for test class [com.example.walkindoorrestapi.WalkIndoorFunctionalTest]: [@org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper.class)]" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Configuration error: found multiple declarations of @BootstrapWith for test class [com.example.walkindoorrestapi.WalkIndoorFunctionalTest]: [@org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.context.SpringBootTestContextBootstrapper.class), @org.springframework.test.context.BootstrapWith(value=org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTestContextBootstrapper.class)]
+	at org.springframework.test.context.BootstrapUtils.resolveExplicitTestContextBootstrapper(BootstrapUtils.java:194)
+	at org.springframework.test.context.BootstrapUtils.resolveTestContextBootstrapper(BootstrapUtils.java:150)
+	at org.springframework.test.context.BootstrapUtils.resolveTestContextBootstrapper(BootstrapUtils.java:126)
+	at org.springframework.test.context.TestContextManager.&lt;init&gt;(TestContextManager.java:126)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.getTestContextManager(SpringExtension.java:362)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.beforeAll(SpringExtension.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

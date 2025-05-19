@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.walkindoorrestapi.UserServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-15T16:56:39.594Z" hostname="DESKTOP-RT47OEL" time="7.111">
+  <properties/>
+  <testcase name="testCreateUser()" classname="com.example.walkindoorrestapi.UserServiceTest" time="6.937"/>
+  <testcase name="testDeleteUser()" classname="com.example.walkindoorrestapi.UserServiceTest" time="0.118"/>
+  <testcase name="testGetUserById()" classname="com.example.walkindoorrestapi.UserServiceTest" time="0.035"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

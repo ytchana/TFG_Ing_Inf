@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.walkindoorrestapi.IntersectionConnectionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-05-15T16:56:30.354Z" hostname="DESKTOP-RT47OEL" time="0.016">
+  <properties/>
+  <testcase name="testIntersectionConnectionCreation()" classname="com.example.walkindoorrestapi.IntersectionConnectionTest" time="0.002"/>
+  <testcase name="testGeoJsonPathFormat()" classname="com.example.walkindoorrestapi.IntersectionConnectionTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
