@@ -1,0 +1,36 @@
+@RestController // Define que esta clase es un controlador REST, permitiendo que maneje solicitudes HTTP.
+@RequestMapping("/auth") // Establece que todas las rutas dentro de este controlador comienzan con "/auth".
+public class AuthController {
+
+    @Autowired // Inyecta automáticamente el repositorio de usuarios para realizar consultas en la base de datos.
+    private UserRepository userRepository;
+
+    @PostMapping("/login") // Define que este método manejará solicitudes POST en la ruta "/auth/login".
+    public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) { 
+        // Recibe los datos de inicio de sesión en formato JSON y los convierte en un objeto LoginRequest.
+
+        Optional<User> user = userRepository.findByEmail(loginRequest.getEmail());
+        // Busca el usuario en la base de datos mediante su correo electrónico.
+
+        if (user.isPresent() && user.get().getPassword().equals(loginRequest.getPassword())) { 
+            // Verifica si el usuario existe y si la contraseña proporcionada es correcta.
+            String token = generateJwtToken(user.get()); // Genera un token JWT para el usuario autenticado.
+            return ResponseEntity.ok(Map.of("token", token)); // Devuelve el token en una respuesta HTTP 200 (OK).
+        }
+
+        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials"); 
+        // Si el usuario no existe o la contraseña es incorrecta, devuelve una respuesta 401 (Unauthorized).
+    }
+
+    private String generateJwtToken(User user) { 
+        // Método privado que genera un token JWT para el usuario autenticado.
+        return Jwts.builder()
+                .setSubject(user.getUsername()) // Define el nombre de usuario como el sujeto del token.
+                .setIssuedAt(new Date()) // Establece la fecha de emisión del token.
+                .setExpiration(new Date(System.currentTimeMillis() + 86400000)) 
+                // Define la expiración del token en 24 horas (86,400,000 milisegundos).
+                .signWith(SignatureAlgorithm.HS512, "your_secret_key") 
+                // Firma el token con el algoritmo HS512 y una clave secreta.
+                .compact(); // Convierte la configuración del token en una cadena lista para usar.
+    }
+}
